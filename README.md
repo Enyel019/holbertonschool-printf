@@ -1,4 +1,5 @@
-* Printf
+* _Printf:
+-----------
 
 * Objective:
 
@@ -18,6 +19,8 @@ Create a function similar to printf.
 - Don’t forget to push your header file
 - All your header files should be include guarded
 - Note that we will not provide the _putchar function for this project
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Functions:
 
 * _putchar:
 Function to prints a character (similar to standard library putchar)
@@ -45,8 +48,9 @@ Header file that contains prototypes for all the functions.
 
 * man_3_printf:
 Man page created for own printf function.
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 Usage:
+
       The _printf function works as follows :
 
       > _printf FORMAT [ARGUMENT]...
