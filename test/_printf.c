@@ -1,47 +1,36 @@
 #include "main.h"
 
 /**
- * _printf - function to print
- *@format: string is composed of zero or more directives
- * Return: the number of characters printed
+ * _printf - Print string input
+ * @format: arguments
+ * Return: return the amount of characters
  */
+
 
 int _printf(const char *format, ...)
 {
-	va_list argument;
-	int printcounter = 0;
 
-	va_start(argument, format);
-	if (*format != '\0')
+	op_t ops[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{"%", print_percent},
+		{"d", print_integer},
+		{"i", print_integer},
+		{NULL, NULL}};
+
+	int print = 0;
+	va_list arg;
+
+	if (format != NULL)
 	{
-		for (; *format != '\0'; format++)
-		{
-			if (*format == '%')
-			{
-				format++;
-				if (*format == 'c')
-					printcounter += print_char(argument);
-				if (*format == 's')
-					printcounter += print_str(argument);
-				if (*format == 'i' || *format == 'd')
-					printcounter += print_int(argument);
-				if (*format == '%')
-				{
-					_putchar('%');
-					printcounter += 1;
-				}
-				if (*format == '\0')
-					return (-1);
-			}
-			else
-			{
-				_putchar(*format);
-				printcounter++;
-			}
-		}
+		va_start(arg, format);
+		print = _enyel(format, ops, arg);
+		va_end(arg);
 	}
-	if (format == NULL)
+	else
+	{
 		return (-1);
-	va_end(argument);
-	return (printcounter);
+	}
+
+	return (print);
 }

@@ -1,0 +1,38 @@
+"_printf man page"
+
+ NAME
+
+_printf
+  
+This function _printf print data in the standard output
+
+ SYNOPSIS
+int _printf(const char *format, ...);
+
+
+ DESCRIPTION
+
+Prints ARGUMENT(s) according to the FORMAT or execution option.
+
+ % FORMAT
+
+%c Format to print a single character
+%s Format to print a string of character 
+%d Format to print a decimal (base 10) number
+%i Format to print an integer a base 10 number
+
+ AUTHOR
+Written by Enyel Feliz Mercado
+
+REPORTING BUGS
+Under construction.
+
+CREDITS
+
+This man page is created for purpose, to make our own _printf project by Enyel Feliz Mercado,
+
+
+SEE ALSO
+Documentation source to create this man page function on <https://www.gnu.org/software/coreutils/printf><https://es.wikipedia.org/wiki/Printf>
+
+
